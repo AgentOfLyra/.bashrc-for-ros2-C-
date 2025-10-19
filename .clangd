@@ -1,0 +1,16 @@
+CompileFlags:
+  Add: 
+    - "-I/opt/ros/humble/include"
+    - "-std=c++17"
+    - "-Wall"
+    - "-Wextra"
+Index:
+  Background: Build
+Diagnostics:
+  ClangTidy:
+    Add: 
+      - modernize*
+      - performance*
+    Remove: 
+      - modernize-use-trailing-return-type
+  UnusedIncludes: Strict
